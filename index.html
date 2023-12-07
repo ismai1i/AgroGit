@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGRO HELPER</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: url('https://th.bing.com/th/id/R.65787a2d44772e8b614d60e7ea4f3d1c?rik=ZHy1pPk2p2Pt4w&pid=ImgRaw&r=0&sres=1&sresct=1') center/cover no-repeat;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .landing-header {
+            text-align: center;
+            color: #f3e8d7; /* Creamy color for the font */
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+
+        .header-content {
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0;
+            animation: slideUp 1.5s forwards;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-family: 'Arial', sans-serif; /* Futuristic font style */
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .get-started-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 10px; /* Slightly rounded button corners */
+            transition: background-color 0.3s ease;
+        }
+
+        .get-started-button:hover {
+            background-color: #45a049;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="landing-header">
+        <div class="header-content">
+            <h1>AGRO HELPER</h1>
+            <p>Welcome to the world of fresh and healthy produce</p>
+            <a href="{{ url_for('form') }}" class="get-started-button">Get Started</a>
+        </div>
+    </header>
+</body>
+
+</html>
